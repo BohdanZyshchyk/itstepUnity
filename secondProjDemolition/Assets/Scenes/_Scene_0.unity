@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 45255603}
   - component: {fileID: 45255602}
   - component: {fileID: 45255604}
+  - component: {fileID: 45255605}
   m_Layer: 0
   m_Name: SlingShot
   m_TagString: Untagged
@@ -259,9 +260,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869ad6d9f2d24a64daffcdae69744b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabProjectile: {fileID: 0}
+  velocityMult: 20
+  launchPoint: {fileID: 0}
+  launchPos: {x: 0, y: 0, z: 0}
+  projectile: {fileID: 0}
+  aimingMode: 0
+--- !u!114 &45255605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45255601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869ad6d9f2d24a64daffcdae69744b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   prefabProjectile: {fileID: 6805035681495799401, guid: be00d3a5295b80940af14c6d42628299,
     type: 3}
-  velocityMult: 8
+  velocityMult: 20
   launchPoint: {fileID: 0}
   launchPos: {x: 0, y: 0, z: 0}
   projectile: {fileID: 0}
@@ -581,6 +600,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: _MainCamera
   m_TagString: MainCamera
@@ -653,6 +673,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111983364ac2c864aa2ebbfbc41d7c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camZ: 0
 --- !u!1 &1090971227
 GameObject:
   m_ObjectHideFlags: 0
