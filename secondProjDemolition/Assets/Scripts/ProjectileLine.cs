@@ -70,6 +70,14 @@ public class ProjectileLine : MonoBehaviour
             // Включить LineRenderer
             line.enabled = true;
         }
+        else 
+        {
+            // Обычная последовательность добавления точки
+            points.Add(pt);
+            line.positionCount = points.Count;
+            line.SetPosition(points.Count - 1, lastPoint);
+            line.enabled = true;
+        }
     }
 
     void FixedUpdate()
