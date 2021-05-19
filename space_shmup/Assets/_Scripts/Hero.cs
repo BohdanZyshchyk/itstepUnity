@@ -15,7 +15,14 @@ public class Hero : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
+        if (S == null)
+        {
+            S = this;
+        }
+        else
+        {
+            Debug.LogError("Hero.Awake() - Attempted to assign second Hero.S!");
+        }
     }
     void Start()
     {
@@ -25,6 +32,17 @@ public class Hero : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Извлечь информацию из класса Input
+        float xAxis = Input.GetAxis("Horizontal");
+        float yAxis = Input.GetAxis("Vertical");
+
+        // Изменить transform.position, опираясь на информацию по осям
+        Vector3 pos = transform.position;
+        pos.x += xAxis * speed * Time.deltaTime;
+        pos.y += yAxis * speed * Time.deltaTime;
+        transform.position = pos;
+
+        // Повернуть корабль, чтобы придать ощущение динамизма 
+        transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
     }
 }
